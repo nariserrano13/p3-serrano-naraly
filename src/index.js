@@ -1,9 +1,16 @@
-import './main.css';
+import './main.css'
 
 import Footer from './modules/footer.js'
-
-const footer = new Footer ("this is the footer")
+const footer = new Footer ("this is the footer from the footerjs file")
 console.log(footer);
+
+import Header from './modules/header.js'
+const header = new Header ("this is the header from the headerjs")
+console.log(header);
+
+import LunchGenerator from './modules/lunch-generator.js'
+const generator = new LunchGenerator ("this is the lunch generator from lunchgeneratorjs")
+console.log(generator);
 
 class App {
     constructor (header, generator, footer){
