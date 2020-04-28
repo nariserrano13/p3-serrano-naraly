@@ -1,3 +1,10 @@
+import './main.css';
+
+import Footer from './modules/footer.js'
+
+const footer = new Footer ("this is the footer")
+console.log(footer);
+
 class App {
     constructor (header, generator, footer){
         this.header = header;
@@ -25,5 +32,6 @@ const template = `
         <div></div>
     </footer>
 `;
+
 
 document.body.innerHTML= template;
