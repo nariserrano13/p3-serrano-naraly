@@ -1,6 +1,7 @@
 import './main.css';
 import { header } from './modules/header';
 import { lunchGenerator } from './modules/lunch-generator';
+import { plantLunchGenerator } from './modules/lunch-generator';
 import { footer } from './modules/footer';
 
 
@@ -22,6 +23,7 @@ class App{
      constructor(){
          this.renderTemplate();
          header.logSomethingToTheConsole();
+         console.log("",plantLunchGenerator);
      }
 
      renderTemplate(){
@@ -29,17 +31,17 @@ class App{
             <header>
                 <div id="banner-icon">
                     <div><h1></h1></div>
-                    <div><img id="logo" src=""></></div>
+                    <div><img id="logo" src="./images/lunch_icon.png"></></div>
                 </div>
                 <div><p>${header.subtext}</p></div>
             </header>
             <main>
                 <div>${lunchGenerator.text}</div>
-                <div></div>
+                <a onclick="plantBasedIdeas()">CLICK ME</a>
             </main>
             <footer>
                 <div>${footer.text}</div>
-                <div></div>
+                <div id="plantBasedContainer"></div>
                 <div></div>
             </footer>
         `;
@@ -49,37 +51,3 @@ class App{
 
 new App;
 
-/*
-class App {
-    constructor (header, generator, footer){
-        this.header = header;
-        this.generator = generator;
-        this.footer = footer;
-    }
-}
-
-const renderTemplate = new App (header.pageTitle, 'this is the generator', 'this is the footer');
-
-const template = `
-    <header>
-        <div id="banner-icon">
-            <div><h1>${renderTemplate.header}</h1></div>
-            <div><img id="logo" src=${headerLogo.pageLogoSrc}></></div>
-        </div>
-        <div><p>${subheading.subtext}</p></div>
-    </header>
-    <main>
-        <div>${renderTemplate.generator}</div>
-        <div></div>
-    </main>
-    <footer>
-        <div>${renderTemplate.footer}</div>
-        <div></div>
-        <div></div>
-    </footer>
-`;
-
-
-document.body.innerHTML= template;
-
-*/
