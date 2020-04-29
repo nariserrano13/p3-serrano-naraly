@@ -3,15 +3,42 @@
 	padding: 0;
 	border: 0;
 }
-
 article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
     display:block;
 }
-
 body{
-	background-color:#efefef;
+	background-color:#05dbf2;
 	display: flex;
 	flex-direction: column;
-
-
+	font-family: 'Ropa Sans', sans-serif;
+}
+.container{
+	background-color: #efefef;
+	max-width: 900px;
+	width: 70%;
+	margin: auto;
+}
+main{
+	width: 30%;
+	height: 200px;
+}
+h1{
+	color: #d91604;
+}
+#logo{
+	max-width: 50px;
+}
+img{
+	max-width: 300px;
+	max-height: 300px;
+}
+a{
+	background-color:#f2622e;
+	margin: 30px 5px;
+	padding: 10px 10px;
+	color: white;
+	border-radius: 5px;
+}
+#plantBasedContainer{
+	font-family: 'Roboto', sans-serif;
 }

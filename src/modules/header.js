@@ -1,7 +1,7 @@
  class Header {
-    constructor(subtext, pageTitle, pageLogoSrc){
-        this.subtext = subtext;
+    constructor(pageTitle, subtext, pageLogoSrc){
         this.pageTitle = pageTitle;
+        this.subtext = subtext;
         this.pageLogoSrc = pageLogoSrc;
     }
     logSomethingToTheConsole(){
@@ -9,7 +9,7 @@
     }
 }
 
-export const header = new Header ('Header Content');
+export const header = new Header ("Random Lunch Generator","when you just cannot decide what to eat");
 
 
 //const headerImg = new Header ()

@@ -1,10 +1,11 @@
 class Footer {
-    constructor(text){
+    constructor(text,subtext){
         this.text = text;
+        this.subtext = subtext;
     }
 }
 
-export const footer = new Footer ('Your Lunch:');
+export const footer = new Footer ('Your Lunch:','not feeling this option?');
 
    
 
