@@ -4,7 +4,7 @@ class Footer {
     }
 }
 
-export const footer = new Footer ('Footer Content');
+export const footer = new Footer ('Your Lunch:');
 
    
 

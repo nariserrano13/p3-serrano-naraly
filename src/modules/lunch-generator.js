@@ -21,7 +21,7 @@ class PlantLunchGenerator extends LunchGenerator{
     plantBasedIdeas=()=>{
     let i,j,k;
 
-    for (i = quotes.length -1; i > 0; i--){
+    for (i = quotes.length -1; i > 0; i--){  
           j = Math.floor(Math.random() * i)
           k = plantBasedIdea[i]
           plantBasedIdea[i] = plantBasedIdea[j]

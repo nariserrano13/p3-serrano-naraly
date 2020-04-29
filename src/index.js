@@ -23,7 +23,7 @@ class App{
      constructor(){
          this.renderTemplate();
          header.logSomethingToTheConsole();
-         console.log("",plantLunchGenerator);
+         plantLunchGenerator.plantBasedIdeas();
      }
 
      renderTemplate(){
@@ -37,7 +37,7 @@ class App{
             </header>
             <main>
                 <div>${lunchGenerator.text}</div>
-                <a onclick="plantBasedIdeas()">CLICK ME</a>
+                <a onclick="${plantLunchGenerator.plantBasedIdeas()}">CLICK ME</a>
             </main>
             <footer>
                 <div>${footer.text}</div>
