@@ -8,7 +8,7 @@ import { footer } from './modules/footer';
 
 class App{
      constructor(){
-         this.renderTemplate();
+        this.renderTemplate();
         lunchGenerator.addText();
         lunchGenerator.clickRefreshButton();
      }
@@ -23,10 +23,12 @@ class App{
                 <div><p>${header.subtext}</p></div>
             </header>
             <main class=container>
-                <div></div>
-                <div>
-                    <a id="buttonPlant">Plant Based</a>
+                <div>PICK A PROTEIN:</div>
+                <div class="buttons_container">
+                    <a id="buttonPlant"> Plant Based </a>
                     <a id="buttonChicken"> Chicken </a>
+                    <a id="buttonSea"> Seafood</a>
+                    <a id="buttonBeef"> Beef </a>
                 </div>
             </main>
             <footer class=container>
@@ -36,6 +38,12 @@ class App{
 
                 <div id="chickenContainer"></div>
                 <img id="chickenImg"></img>
+
+                <div id="seaContainer"></div>
+                <img id="seaImg"></img>
+
+                <div id="beefContainer"></div>
+                <img id="beefImg"></img>
 
                 <div>${footer.subtext}</div>
                 <a id="refreshButton">TRY AGAIN</a>

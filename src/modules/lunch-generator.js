@@ -30,28 +30,66 @@ class LunchGenerator {
                 image: './images/chicken_quesadilla.jpg'
             },
             {
-                title: 'chicken 2',
-                image: './image/pic.png'
+                title: 'Chicken Burrito Bowl',
+                image: './images/chicken_bowl.jpg'
             },
             {
-                title: 'chicken 3',
-                image: './images/pic.png'
+                title: 'Shredded Chicken Tacos',
+                image: './images/chicken_tacos.jpg'
             },
             {
-                title: 'chicken 4',
-                image: './image/pic.png'
+                title: 'Asian Chicken Wrap w/ Peanut Sauce',
+                image: './images/chicken_wrap.jpg'
             },
             {
-                title: 'chicken 5',
-                image: './images/pic.png'
+                title: 'Chicken Parmesan Sandwhich',
+                image: './images/chicken_sandwhich.jpg'
             }
         ];
         this.lunchSeaArray = [
-
+            {
+                title: 'Tuna Quinoa Salad',
+                image: './images/sea_salad.jpg'
+            },
+            {
+                title: 'Thai Salmon Chili Skewers',
+                image: './images/sea_skewers.jpg'
+            },
+            {
+                title: 'Shrimp & Avacado Salad',
+                image: './images/sea_shrimpsalad.jpg'
+            },
+            {
+                title: 'Shrimp Ceviche Tostada',
+                image: './images/sea_tostada.jpg'
+            },            
+            {
+                title: 'Cod Fish Tacos',
+                image: './images/sea_tacos.jpg'
+            }
         ];
 
         this.lunchBeefArray = [
-
+            {
+                title: '',
+                image: './images/beef_'
+            },
+            {
+                title: '',
+                image: './images/beef_'
+            },
+            {
+                title: '',
+                image: './images/beef_'
+            },
+            {
+                title: '',
+                image: './images/beef_'
+            },
+            {
+                title: '',
+                image: './images/beef_'
+            }
         ];
 
     }
@@ -70,6 +108,12 @@ class LunchGenerator {
               this.lunchChickenArray[i] = this.lunchChickenArray[j]
               this.lunchChickenArray[j] = k
         }
+        for (let i = this.lunchSeaArray.length -1; i > 0; i--){
+              const j = Math.floor(Math.random() * i)
+              const k = this.lunchSeaArray[i]
+              this.lunchSeaArray[i] = this.lunchSeaArray[j]
+              this.lunchSeaArray[j] = k
+        }
     }
 
     addText(){
@@ -87,6 +131,12 @@ class LunchGenerator {
                 this.sorting();
                 chickenContainer.innerHTML = this.lunchChickenArray[0].title
                 chickenImg.src = this.lunchChickenArray[0].image
+            })
+
+            document.getElementById("buttonSea").addEventListener('click', ()=>{
+                this.sorting();
+                seaContainer.innerHTML = this.lunchSeaArray[0].title
+                seaImg.src = this.lunchSeaArray[0].image
             })
         }
     }
