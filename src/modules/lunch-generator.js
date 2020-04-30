@@ -71,24 +71,24 @@ class LunchGenerator {
 
         this.lunchBeefArray = [
             {
-                title: '',
-                image: './images/beef_'
+                title: 'Beef Broccoli Stir Fry',
+                image: './images/beef_stirfry.jpg'
             },
             {
-                title: '',
-                image: './images/beef_'
+                title: 'Hamburger Pizza',
+                image: './images/beef_pizza.jpg'
             },
             {
-                title: '',
-                image: './images/beef_'
+                title: 'Beef Tacos',
+                image: './images/beef_tacos.jpg'
             },
             {
-                title: '',
-                image: './images/beef_'
+                title: 'Cheeseburger',
+                image: './images/beef_burger.jpg'
             },
             {
-                title: '',
-                image: './images/beef_'
+                title: 'Thai Beef Salad',
+                image: './images/beef_salad.jpg'
             }
         ];
 
@@ -114,6 +114,12 @@ class LunchGenerator {
               this.lunchSeaArray[i] = this.lunchSeaArray[j]
               this.lunchSeaArray[j] = k
         }
+        for (let i = this.lunchBeefArray.length -1; i > 0; i--){
+              const j = Math.floor(Math.random() * i)
+              const k = this.lunchBeefArray[i]
+              this.lunchBeefArray[i] = this.lunchBeefArray[j]
+              this.lunchBeefArray[j] = k
+        }
     }
 
     addText(){
@@ -137,6 +143,12 @@ class LunchGenerator {
                 this.sorting();
                 seaContainer.innerHTML = this.lunchSeaArray[0].title
                 seaImg.src = this.lunchSeaArray[0].image
+            })
+            
+            document.getElementById("buttonBeef").addEventListener('click', ()=>{
+                this.sorting();
+                beefContainer.innerHTML = this.lunchBeefArray[0].title
+                beefImg.src = this.lunchBeefArray[0].image
             })
         }
     }

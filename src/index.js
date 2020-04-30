@@ -1,9 +1,7 @@
 import './main.css';
 import { header } from './modules/header';
 import { lunchGenerator } from './modules/lunch-generator';
-//import { plantLunchGenerator } from './modules/lunch-generator';
 import { footer } from './modules/footer';
-
 
 
 class App{
@@ -23,30 +21,40 @@ class App{
                 <div><p>${header.subtext}</p></div>
             </header>
             <main class=container>
-                <div>PICK A PROTEIN:</div>
+                <h2>PICK A PROTEIN:</h2>
                 <div class="buttons_container">
-                    <a id="buttonPlant"> Plant Based </a>
+                    <a id="buttonPlant"> Veggie </a>
                     <a id="buttonChicken"> Chicken </a>
                     <a id="buttonSea"> Seafood</a>
                     <a id="buttonBeef"> Beef </a>
                 </div>
             </main>
             <footer class=container>
-                <div>${footer.text}</div>
-                <div id="plantBasedContainer"></div>
-                <img id="plantBasedImg"></img>
-
-                <div id="chickenContainer"></div>
-                <img id="chickenImg"></img>
-
-                <div id="seaContainer"></div>
-                <img id="seaImg"></img>
-
-                <div id="beefContainer"></div>
-                <img id="beefImg"></img>
-
-                <div>${footer.subtext}</div>
-                <a id="refreshButton">TRY AGAIN</a>
+                <h2>${footer.text}</h2>
+                <div class="food_container">
+                    <div>
+                        <div id="plantBasedContainer"></div>
+                        <img id="plantBasedImg"></img>
+                    </div>
+                    <div>
+                        <div id="chickenContainer"></div>
+                        <img id="chickenImg"></img>
+                    </div>
+                    <div>
+                        <div id="seaContainer"></div>
+                        <img id="seaImg"></img>
+                    </div>
+                    <div>
+                        <div id="beefContainer"></div>
+                        <img id="beefImg"></img>
+                    </div>
+                </div>
+                <div>
+                    <p>${footer.subtext}</p>
+                </div>
+                <div class="refresh">
+                    <a id="refreshButton">TRY AGAIN</a>
+                </div>
             </footer>
         `;
         document.body.innerHTML= template;
