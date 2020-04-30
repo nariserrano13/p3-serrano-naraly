@@ -17,6 +17,9 @@ body{
 	max-width: 900px;
 	width: 70%;
 	margin: auto;
+	border-style: solid;
+	border-color: #d91604;
+	border-width: 0px 3px;
 }
 header{
 	padding: 20px 15px;
@@ -37,8 +40,9 @@ h2{
 	justify-content: space-evenly;
 }
 img{
-	max-width: 65%;
+	max-width: 100%;
 	max-height: 300px;
+	border-radius: 7px;
 }
 main{
 	padding: 20px 15px 0px 15px;
@@ -73,6 +77,10 @@ footer div{
 	color: #d91604;
 	font-family: 'Roboto', sans-serif;
 	width: 70%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 .food_container{
 	max-width: 500px;
@@ -90,9 +98,23 @@ footer a{
 	margin: 20px 0px;
 }
 .refresh{
-	margin-top: 25px;
+	margin-top: 15px;
+	
 }
-@media (min-width: 650px){
+#refreshButton{
+	width: 100px;
+}
+@media (min-width:570px){
+	header p{
+		position: relative;
+		top: -40px;
+		text-align: center;
+	}
+	main {
+		padding: 0px 15px 0px 15px;
+	}
+}
+@media (min-width: 680px){
 	h1{
 		font-size: 2.5rem;
 	}

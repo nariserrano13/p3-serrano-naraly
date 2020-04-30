@@ -49,6 +49,7 @@ class App{
                         <img id="beefImg"></img>
                     </div>
                 </div>
+
                 <div>
                     <p>${footer.subtext}</p>
                 </div>
